@@ -1,0 +1,23 @@
+{
+  "name": "Sombra",
+  "description": "C++ Server Application",
+  "main": "start.sh",
+  "keywords": [
+    "C++"
+  ],
+  "authors": [
+    "Anduin"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.3"
+  }
+}
