@@ -10,6 +10,7 @@ public:
   virtual IApplicationBuilder *UseStaticFiles() = 0;
   virtual IApplicationBuilder *Use404Page() = 0;
   virtual IApplicationBuilder *UseMVC() = 0;
+  virtual IApplicationBuilder *UseDefaultPage() = 0;
 
   //virtual IActionResult *ExcuteResult(HTTPContext * context) = 0;
   virtual void OnMessage(HTTPContext * context) = 0;

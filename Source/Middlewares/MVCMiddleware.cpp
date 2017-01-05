@@ -1,9 +1,12 @@
 MVCMiddleware::MVCMiddleware() {}
-MVCMiddleware::~MVCMiddleware() {}
+MVCMiddleware::~MVCMiddleware() 
+{
+    delete this->NextMiddleware;
+}
 
 void MVCMiddleware::OnMessage(HTTPContext *context)
 {
-  char *path = context->Path;
+  const char *path = context->Path;
   if (strcmp(path, "./wwwroot/home/index") == 0)
   {
     HomeController *homecontroller = new HomeController();

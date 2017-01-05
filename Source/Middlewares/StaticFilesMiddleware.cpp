@@ -1,5 +1,8 @@
 StaticFilesMiddleware::StaticFilesMiddleware() {}
-StaticFilesMiddleware::~StaticFilesMiddleware() {}
+StaticFilesMiddleware::~StaticFilesMiddleware() 
+{
+  delete this->NextMiddleware;
+}
 
 void header(FILE *fp,const char *content_type)
 {
@@ -8,9 +11,10 @@ void header(FILE *fp,const char *content_type)
     fprintf(fp, "Content-type: %s\r\n", content_type);
 }
 
-char *rmask(char *string)
+const char *rmask(const char *string)
 {
-  char *p = string;
+  char *p = new char[BUFSIZ];
+  strcpy(p,string);
   if (p == NULL)
   {
     return NULL;
@@ -28,9 +32,9 @@ char *rmask(char *string)
   }
 }
 
-const char *file_type(char *f)
+const char *file_type(const char *f)
 {
-  char *cp;
+  const char *cp;
   if ((cp = strrchr(f, '.')) != NULL)
     return cp + 1;
   return "";
@@ -66,7 +70,7 @@ void StaticFilesMiddleware::OnMessage(HTTPContext *context)
 
   //fpsock = fdopen(fd, "w");
   fpsock = context->fp;
-  char *path = rmask(context->Path);
+  const char *path = rmask(context->Path);
   fpfile = fopen(path, "r");
   if (fpsock != NULL && fpfile != NULL)
   {

@@ -9,6 +9,7 @@ public:
   IApplicationBuilder *UseStaticFiles();
   IApplicationBuilder *Use404Page();
   IApplicationBuilder *UseMVC();
+  IApplicationBuilder *UseDefaultPage();
 
   IActionResult *ExcuteResult(HTTPContext *context);
   void OnMessage(HTTPContext *context);

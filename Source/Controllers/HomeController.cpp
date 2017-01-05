@@ -7,7 +7,7 @@ class HomeController : public Controller
   public:
     IActionResult *Index()
     {
-        return new ActionResult("Hello World!");
+        return 0;
     }
 
     IActionResult *Sprites(HTTPContext *context)

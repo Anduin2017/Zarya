@@ -13,11 +13,10 @@ void read_til_crnl(FILE *fp)
         ;
 }
 
-
 void SombraServer::Run()
 {
     HostBuilder::Run();
-    std::cout << "Server Starting at:" << port << std::endl;
+    std::cout << "Server Starting at: http://localhost:" << port << "/" << std::endl;
 
     int sock, SocketId;
     FILE *fpin;
@@ -49,6 +48,7 @@ void SombraServer::Run()
     }
     return;
 }
+
 void SombraServer::GiveMiddlewares(IApplicationBuilder *middlewares)
 {
     this->middlewares = middlewares;

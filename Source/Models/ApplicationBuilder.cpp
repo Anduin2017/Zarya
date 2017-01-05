@@ -3,6 +3,7 @@ ApplicationBuilder::ApplicationBuilder()
 }
 ApplicationBuilder::~ApplicationBuilder()
 {
+    delete this->NextMiddleware;
 }
 
 IApplicationBuilder *ApplicationBuilder::UseMiddleware(IApplicationBuilder *NewMiddleware)
@@ -18,21 +19,28 @@ IApplicationBuilder *ApplicationBuilder::UseMiddleware(IApplicationBuilder *NewM
 IApplicationBuilder *ApplicationBuilder::UseStaticFiles()
 {
     this->UseMiddleware(new StaticFilesMiddleware());
-    std::cout << "UseStaticFiles Middleware now added to your app!" << std::endl;
+    std::cout << "StaticFilesMiddleware\t Middleware now added to your app!" << std::endl;
     return this;
 }
 
 IApplicationBuilder *ApplicationBuilder::Use404Page()
 {
     this->UseMiddleware(new _404Middleware());
-    std::cout << "Use404Page Middleware now added to your app!" << std::endl;
+    std::cout << "_404Middleware\t\t Middleware now added to your app!" << std::endl;
     return this;
 }
 
 IApplicationBuilder *ApplicationBuilder::UseMVC()
 {
     this->UseMiddleware(new MVCMiddleware());
-    std::cout << "UseMVCMiddleware Middleware now added to your app!" << std::endl;
+    std::cout << "MVCMiddleware\t\t Middleware now added to your app!" << std::endl;
+    return this;
+}
+
+IApplicationBuilder *ApplicationBuilder::UseDefaultPage()
+{
+    this->UseMiddleware(new DefaultPageMiddleware());
+    std::cout << "DefaultPageMiddleware\t Middleware now added to your app!" << std::endl;
     return this;
 }
 

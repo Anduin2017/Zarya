@@ -4,7 +4,7 @@ class HTTPContext
 
   public:
     FILE* fp;
-    char* Path;
+    const char* Path;
     HTTPContext();
     ~HTTPContext();
 };

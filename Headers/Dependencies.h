@@ -14,6 +14,8 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <time.h>
+#include <pthread.h>
+
 
 #include "Librarys/socketlib.c"
 //.h
@@ -26,6 +28,7 @@
 #include "Middlewares/_404Middleware.h"
 #include "Middlewares/StaticFilesMiddleware.h"
 #include "Middlewares/MVCMiddleware.h"
+#include "Middlewares/DefaultPageMiddleware.h"
 #include "Models/ActionResult.h"
 #include "Models/HostBuilder.h"
 #include "Models/StartUp.h"
@@ -43,5 +46,6 @@
 #include "../Source/Middlewares/_404Middleware.cpp"
 #include "../Source/Middlewares/StaticFilesMiddleware.cpp"
 #include "../Source/Middlewares/MVCMiddleware.cpp"
+#include "../Source/Middlewares/DefaultPageMiddleware.cpp"
 
 

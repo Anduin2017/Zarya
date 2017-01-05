@@ -1,5 +1,8 @@
 _404Middleware::_404Middleware() {}
-_404Middleware::~_404Middleware() {}
+_404Middleware::~_404Middleware()
+{
+  delete this->NextMiddleware;
+}
 
 void _404Middleware::OnMessage(HTTPContext *context)
 {

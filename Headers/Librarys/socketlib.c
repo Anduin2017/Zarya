@@ -30,7 +30,7 @@ int make_server_socket_q(int portnum, int backlog)
 	char	hostname[HOSTLEN];     /* address 	         */
 	int	sock_id;	       /* the socket             */
 
-	sock_id = socket(PF_INET, SOCK_STREAM, 0);  /* get a socket */
+	sock_id = socket(AF_INET, SOCK_STREAM, 0);  /* get a socket */
 	if ( sock_id == -1 ) 
 		return -1;
 
@@ -42,7 +42,8 @@ int make_server_socket_q(int portnum, int backlog)
 	                                        /* fill in host part    */
 	bcopy( (void *)hp->h_addr, (void *)&saddr.sin_addr, hp->h_length);
 	saddr.sin_port = htons(portnum);        /* fill in socket port  */
-	saddr.sin_family = AF_INET ;            /* fill in addr family  */
+	saddr.sin_family = AF_INET ;      
+	saddr.sin_addr.s_addr = INADDR_ANY;
 	if ( bind(sock_id, (struct sockaddr *)&saddr, sizeof(saddr)) != 0 )
 	       return -1;
 
