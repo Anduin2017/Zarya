@@ -1,12 +1,12 @@
-class SombraServer : public HostBuilder, implements IApplicationServer //implements IService
+class ZaryaServer : public HostBuilder, implements IApplicationServer //implements IService
 {
 private:
   int port;
   IApplicationBuilder *middlewares;
 
 public:
-  SombraServer(int port);
-  ~SombraServer();
+  ZaryaServer(int port);
+  ~ZaryaServer();
   void Run();
 
   void GiveMiddlewares(IApplicationBuilder *middlewares);

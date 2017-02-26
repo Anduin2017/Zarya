@@ -1,8 +1,8 @@
-SombraServer::SombraServer(int port)
+ZaryaServer::ZaryaServer(int port)
 {
     this->port = port;
 }
-SombraServer::~SombraServer()
+ZaryaServer::~ZaryaServer()
 {
 }
 
@@ -13,7 +13,7 @@ void read_til_crnl(FILE *fp)
         ;
 }
 
-void SombraServer::Run()
+void ZaryaServer::Run()
 {
     HostBuilder::Run();
     std::cout << "Server Starting at: http://localhost:" << port << "/" << std::endl;
@@ -49,7 +49,7 @@ void SombraServer::Run()
     return;
 }
 
-void SombraServer::GiveMiddlewares(IApplicationBuilder *middlewares)
+void ZaryaServer::GiveMiddlewares(IApplicationBuilder *middlewares)
 {
     this->middlewares = middlewares;
 }

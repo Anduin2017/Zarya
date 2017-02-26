@@ -32,7 +32,7 @@
 #include "Models/ActionResult.h"
 #include "Models/HostBuilder.h"
 #include "Models/StartUp.h"
-#include "Models/SombraServer.h"
+#include "Models/ZaryaServer.h"
 //Controller
 #include "../Source/Controllers/HomeController.cpp"
 
@@ -41,7 +41,7 @@
 #include "../Source/Models/ActionResult.cpp"
 #include "../Source/Models/HostBuilder.cpp"
 #include "../Source/StartUp.cpp"
-#include "../Source/Models/SombraServer.cpp"
+#include "../Source/Models/ZaryaServer.cpp"
 #include "../Source/Models/ApplicationBuilder.cpp"
 #include "../Source/Middlewares/_404Middleware.cpp"
 #include "../Source/Middlewares/StaticFilesMiddleware.cpp"

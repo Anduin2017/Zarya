@@ -1,5 +1,8 @@
-# Sombra
-Sombra是一款基于C++的现代化、面向Linux的、MVVM模式的Web开发框架
+# Zarya
+Zarya是一款基于C++的现代化、面向Linux的、MVVM模式的Web开发框架
+
+使用方法: 启动Zarya后，将会以wwwroot目录作为Web应用的根目录，以9000作为端口号，承载Web应用程序。
+
 
 ## 如何运行
 运行需要的环境：  
