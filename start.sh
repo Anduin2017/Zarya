@@ -1,2 +1,2 @@
-g++ ./Program.cpp -o Bin/Program.out -lpthread
+g++ ./Program.cpp -o Bin/Program.out
 ./Bin/Program.out

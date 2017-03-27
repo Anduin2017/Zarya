@@ -6,11 +6,11 @@ using namespace std;
 
 int main()
 {
-    ZaryaServer *ZaryaServer = new ZaryaServer(9000);
+    ZaryaServer *zaryaServer = new ZaryaServer(9000);
     HostBuilder *host = new HostBuilder();
 
-    host->UseStartUp(ZaryaServer)
-        ->UseServer(ZaryaServer)
+    host->UseStartUp(zaryaServer)
+        ->UseServer(zaryaServer)
         ->Run();
 
     return 0;
