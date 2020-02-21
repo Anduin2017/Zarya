@@ -9,8 +9,6 @@ Zarya是一款基于C++的现代化、面向Linux的、MVVM模式的Web开发框
 
 中间件、缓存、依赖注入、断点续传、ETag、Cookie、上下文发现和响应渲染、性能、过滤器、保护器……
 
-哦天哪，还是要我拿C++写，简直是要杀了我。。。。
-
 所以我后来又拿C#重新写了一遍这个项目，在这儿 [https://github.com/Anduin2017/Genji.git](https://github.com/Anduin2017/Genji.git)
 
 对Zarya感兴趣的朋友，它没有完工，只有基础的静态文件承载能力。如果你愿意扩展它，请带走这份代码。如果你对自建HTTP服务器感兴趣，请参考Genji。
