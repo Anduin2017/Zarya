@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    ZaryaServer *zaryaServer = new ZaryaServer(9000);
+    ZaryaServer *zaryaServer = new ZaryaServer(8080);
     HostBuilder *host = new HostBuilder();
 
     host->UseStartUp(zaryaServer)
