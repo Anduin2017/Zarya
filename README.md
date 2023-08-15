@@ -21,7 +21,6 @@ Environment required for running:
 
 Installation required before running:
 
-* git
 * g++
 
 Commands required to start the project:
