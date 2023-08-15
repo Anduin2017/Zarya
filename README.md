@@ -1,52 +1,36 @@
 # Zarya
 
-使用方法: 启动Zarya后，将会以wwwroot目录作为Web应用的根目录，以8080作为端口号，承载Web应用程序。
+Usage: After starting Zarya, it will serve as a web application with the wwwroot directory as the root directory and port 8080 as the port number.
 
-## 这个项目为什么后来不再被维护了
+## Why this project is no longer maintained
 
-我在维护Zarya后，突然认识到原来做一个Web Server要处理的细节实在是太多了……
+While maintaining Zarya, I suddenly realized that there are too many details to handle when building a web server...
 
-中间件、缓存、依赖注入、断点续传、ETag、Cookie、上下文发现和响应渲染、性能、过滤器、保护器……
+Middleware, caching, dependency injection, resumable downloads, ETags, cookies, context discovery and response rendering, performance, filters, protectors...
 
-对Zarya感兴趣的朋友，它没有完工，只有基础的静态文件承载能力。如果你愿意扩展它，请带走这份代码。
+For friends who are interested in Zarya, it is not complete, with only basic static file hosting capabilities. If you are willing to extend it, please take this code with you.
 
+## How to run
 
-## 如何运行
-运行需要的环境：  
-* Linux (Windows 下不支持)  
+Environment required for running:  
 
-运行前需要安装：
+* Linux Or Unix (not supported on Windows)  
 
-* bower
-* npm
+Installation required before running:
+
 * git
 * g++
 
-运行前需要准备：  
+Commands required to start the project:
 
-    bower install
-    npm install
+```bash
+mkdir Bin &> /dev/null
+g++ ./Program.cpp -o Bin/Program.out
+./Bin/Program.out
+```
 
-启动项目所需的命令：
+Then start your browser and visit the following URL:
 
-    ./start.sh
+>http://localhost:9000/
 
-之后启动浏览器，访问下面地址：
-
-    http://localhost:9000/
-
-如果能够正常体验应用，那么恭喜，你已经完成了该项目的编译、链接和运行！
-
-## 如何部署到生产环境中
-
-尚未完成
-
-## 如何扩展开发
-
-### 目录说明
-
-### 中间件说明
-
-### 关键文件
-
-## 如何贡献
+If you can experience the application normally, congratulations, you have completed the compilation, linking and running of this project!

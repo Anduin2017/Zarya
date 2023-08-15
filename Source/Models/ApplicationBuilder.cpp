@@ -14,6 +14,7 @@ IApplicationBuilder *ApplicationBuilder::UseMiddleware(IApplicationBuilder *NewM
         Pointer = Pointer->NextMiddleware;
     }
     Pointer->NextMiddleware = NewMiddleware;
+    return this;
 }
 
 IApplicationBuilder *ApplicationBuilder::UseStaticFiles()
