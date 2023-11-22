@@ -1,6 +1,6 @@
 # Zarya
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/aiursoft/infrastructures/-/blob/master/LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/anduin/zarya/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.cn/anduin/zarya/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/anduin/zarya/-/pipelines)
 
 Usage: After starting Zarya, it will serve as a web application with the wwwroot directory as the root directory and port 8080 as the port number.
