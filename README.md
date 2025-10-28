@@ -2,7 +2,7 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/anduin/zarya/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/anduin/zarya/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/anduin/zarya/-/pipelines)
-[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.com/anduin/Zarya.svg)](https://gitlab.aiursoft.com/anduin/Zarya/-/commits/master?ref_type=heads)
+[![ManHours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/anduin/Zarya.svg)](https://gitlab.aiursoft.com/anduin/Zarya/-/commits/master?ref_type=heads)
 
 Usage: After starting Zarya, it will serve as a web application with the wwwroot directory as the root directory and port 8080 as the port number.
 
